@@ -1,4 +1,6 @@
 require 'pry'
+require 'colorize'
+require 'ruby-progressbar'
 
 root_dir = File.dirname(__FILE__)
 require_pattern = File.join(root_dir, '**/*.rb')
@@ -20,8 +22,8 @@ end
   require_relative f.gsub("#{root_dir}/", '')
 end
 
-@game = Game.new
+$game = Game.new
 
-while 1
-  @game.update
+while $game.play_state?
+  $game.update
 end
