@@ -9,7 +9,7 @@ class Game
     # create_larvas(1)
 
     create_workers(10)
-    create_providers(15)
+    create_providers(1)
 
     @state = :play
   end
